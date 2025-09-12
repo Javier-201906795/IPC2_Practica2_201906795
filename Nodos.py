@@ -163,3 +163,25 @@ class ListaSimple:
             actual = actual.siguiente
             indice += 1
         return -1
+    
+
+class Paciente(InfoNodo):
+    def __init__(self, nombre, edad, especialidadmedica):
+        self.nombre = nombre
+        self.edad = edad
+        self.especialidadmedica = especialidadmedica
+        self.id = None
+    
+    def asignarid(self, id):
+        self.id = id
+
+    def EsIgualALLave(self, id):
+        return self.id == id
+
+    def desplegar(self):
+        print("\n-------------------")
+        print("Nombre: ", self.nombre)
+        print("Edad: ", self.edad)
+        print("Especialidad Medica: ", self.especialidadmedica)
+        print("ID: ", self.id)
+        print("-------------------\n")
