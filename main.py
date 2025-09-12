@@ -57,7 +57,7 @@ for minuto in range(1,minutosmax):
         
         persona_atendiendo.desplegar()
         tiempofalante = tiempo_faltante(persona_atendiendo, minuto)
-        print(f"> Tiempo faltante: {tiempofalante} minutos")
+        print(f"------------------------------------> Tiempo faltante: {tiempofalante} minutos")
 
         if tiempofalante <= 0:
             print(">>> Paciente atendido")
