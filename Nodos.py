@@ -171,7 +171,11 @@ class Paciente(InfoNodo):
         self.edad = edad
         self.especialidadmedica = especialidadmedica
         self.id = None
+        self.minutoentredaacola = None
     
+    def asignarminutoentredaacola(self, minuto):
+        self.minutoentredaacola = minuto
+
     def asignarid(self, id):
         self.id = id
 
@@ -184,4 +188,5 @@ class Paciente(InfoNodo):
         print("Edad: ", self.edad)
         print("Especialidad Medica: ", self.especialidadmedica)
         print("ID: ", self.id)
+        print("Minuto de entrada a cola: ", self.minutoentredaacola)
         print("-------------------\n")
