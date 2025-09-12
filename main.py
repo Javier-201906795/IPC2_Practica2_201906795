@@ -28,9 +28,17 @@ def crear_paciente(nombre,edad, especialidad):
 crear_paciente("Juan Perez", 30, "Pediatria")
 crear_paciente("Maria Mendez", 18, "Medicina General")
 
-
+#EMULACION ATENCION
 #Cada ciclo es un 1 minuto
 minutosmax = 30
 for minuto in range(1,minutosmax):
-    # print(f"\nMinuto {minuto}")
-    pass
+    print(f"\nMinuto {minuto}")
+    
+    #Atender paciente
+    if persona_atendiendo != None:
+        print(">> Atendiendo a:")
+        persona_atendiendo.desplegar()
+    else:
+        persona_atendiendo = ColaPacientes.Pop()
+        print("No hay pacientes en espera")
+    
