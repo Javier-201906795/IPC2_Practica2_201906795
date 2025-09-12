@@ -47,7 +47,7 @@ crear_paciente("Maria Mendez", 18, "Medicina General")
 
 #EMULACION ATENCION
 #Cada ciclo es un 1 minuto
-minutosmax = 30
+minutosmax = 35
 for minuto in range(1,minutosmax):
     print(f"\nMinuto {minuto}")
     
