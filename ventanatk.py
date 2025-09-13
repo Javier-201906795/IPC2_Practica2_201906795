@@ -101,16 +101,19 @@ boton_imagen.pack(pady=20)
 
 
 def mostrar_paciente():
-    nombre = "mario"
-    edad = "12"
-    especialidad = "Pediatria"
-    
-    # Aquí puedes calcular minutos de entrada y atendido, por ahora pongo valores de ejemplo
-    minuto_entrada = 1
-    minuto_atendido = 28
-    
-    texto = f"Nombre: {nombre}\nEdad: {edad}\nEspecialidad Medica: {especialidad}\nMinuto de entrada a Cola: {minuto_entrada}\nMinuto atendido: {minuto_atendido}"
-    label_paciente.config(text=texto)
+    if persona_atendiendo == None:
+        label_paciente.config(text="No hay paciente siendo atendido")
+    else:
+        nombre = persona_atendiendo.nombre
+        edad = persona_atendiendo.edad
+        especialidad = persona_atendiendo.especialidadmedica
+        
+        # Aquí puedes calcular minutos de entrada y atendido, por ahora pongo valores de ejemplo
+        minuto_entrada = persona_atendiendo.minutoentradaalacola
+        minuto_atendido = persona_atendiendo.minutoentredaatendido
+        
+        texto = f"Nombre: {nombre}\nEdad: {edad}\nEspecialidad Medica: {especialidad}\nMinuto de entrada a Cola: {minuto_entrada}\nMinuto atendido: {minuto_atendido}"
+        label_paciente.config(text=texto)
 
 
 # Label de tiempo
