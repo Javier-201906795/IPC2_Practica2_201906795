@@ -44,7 +44,10 @@ node [shape=box, style=filled, fillcolor=lightyellow, fontname="Helvetica"];
     for i in range(1,numeropacientes):
         if i <= 1:
             paciente = ColaPacientes.primero
-            listanodos += f"paciente{i} -> "
+            if numeropacientes == 2:
+                listanodos += f"paciente{i}"
+            else:
+                listanodos += f"paciente{i} -> "
         elif i == numeropacientes -1:
             paciente = paciente.siguiente
             listanodos += f"paciente{i}"

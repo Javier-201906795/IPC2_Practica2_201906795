@@ -43,7 +43,8 @@ def tiempo_faltante(paciente, minuto_actual):
     
     return tiempoestimado - (minuto_actual - tiempoentrada)
 
-
+def graficar_cola():
+    imagenCola(ColaPacientes)
 
 
 

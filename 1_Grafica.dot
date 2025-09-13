@@ -1,40 +1,10 @@
 digraph ColaPacientes {
 graph [rankdir=LR];
 node [shape=box, style=filled, fillcolor=lightyellow, fontname="Helvetica"];
-paciente1 [label="Nombre: Juan Perez
-Edad: 30
-Especialidad Medica: Pediatria
-Minuto entrada: 1
-Minuto atendido: None"];
-paciente2 [label="Nombre: Maria Mendez
-Edad: 18
-Especialidad Medica: Medicina General
-Minuto entrada: 5
-Minuto atendido: None"];
-paciente3 [label="Nombre: Juan Perez
-Edad: 30
-Especialidad Medica: Pediatria
-Minuto entrada: 1
-Minuto atendido: None"];
-paciente4 [label="Nombre: Juan Perez
-Edad: 30
-Especialidad Medica: Pediatria
-Minuto entrada: 1
-Minuto atendido: None"];
-paciente5 [label="Nombre: Juan Perez
-Edad: 30
-Especialidad Medica: Pediatria
-Minuto entrada: 1
-Minuto atendido: None"];
-paciente6 [label="Nombre: Juan Perez
-Edad: 30
-Especialidad Medica: Pediatria
-Minuto entrada: 1
-Minuto atendido: None"];
-paciente7 [label="Nombre: Juan Perez
-Edad: 30
-Especialidad Medica: Pediatria
-Minuto entrada: 1
+paciente1 [label="Nombre: juan
+Edad: 12
+Especialidad Medica: Ginecologia
+Minuto entrada: 3
 Minuto atendido: None"];
 
-paciente1 -> paciente2 -> paciente3 -> paciente4 -> paciente5 -> paciente6 -> paciente7;}
+paciente1;}

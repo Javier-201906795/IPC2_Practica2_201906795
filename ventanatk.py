@@ -52,7 +52,8 @@ def atender_paciente(minuto):
             persona_atendiendo.desplegar()
     #Muestra en un texto la informacion del paciente
     mostrar_paciente()
-
+    #Graficar cola
+    graficar_cola()
 
 
 
