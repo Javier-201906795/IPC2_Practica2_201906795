@@ -7,6 +7,43 @@ from funciones import *
 #Variables
 contador_tiempo = 0
 
+persona_atendiendo = None
+
+
+def atender_paciente(minuto):
+    global persona_atendiendo
+    #Atender paciente
+    if persona_atendiendo != None:
+        print(">> Atendiendo a:")
+        
+        persona_atendiendo.desplegar()
+        tiempofalante = tiempo_faltante(persona_atendiendo, minuto)
+        print(f"------------------------------------> Tiempo faltante: {tiempofalante} minutos")
+
+        if tiempofalante <= 0:
+            print(">>> Paciente atendido")
+            persona_atendiendo = None
+        
+    else:
+        #Agregar paciente a atender
+        persona_atendiendo = ColaPacientes.Pop()
+        if persona_atendiendo != None:
+            print(">>> Nuevo paciente a atender:")
+            persona_atendiendo.asignarminutoentredaatendido(minuto)
+            persona_atendiendo.desplegar()
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ventana = tk.Tk()
 ventana.geometry("1000x650")
@@ -87,6 +124,7 @@ def incrementar_tiempo1():
     global contador_tiempo
     contador_tiempo += 1
     label_tiempo.config(text=f"Tiempo: {contador_tiempo}")
+    atender_paciente(contador_tiempo)
 
 def incrementar_tiempo5():
     global contador_tiempo
