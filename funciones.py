@@ -54,6 +54,11 @@ def tiempo_faltante(paciente, minuto_actual):
 #paciente nuevo
 crear_paciente("Juan Perez", 30, "Pediatria",1)
 crear_paciente("Maria Mendez", 18, "Medicina General",5)
+crear_paciente("Juan Perez", 30, "Pediatria",1)
+crear_paciente("Juan Perez", 30, "Pediatria",1)
+crear_paciente("Juan Perez", 30, "Pediatria",1)
+crear_paciente("Juan Perez", 30, "Pediatria",1)
+crear_paciente("Juan Perez", 30, "Pediatria",1)
 
 
 #Crear imagen de la cola

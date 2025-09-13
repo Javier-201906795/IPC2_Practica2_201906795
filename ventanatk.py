@@ -36,8 +36,42 @@ def agregar_paciente():
     especialidad = entrada_especialidad.get()
     print(f"Nombre: {nombre}, Edad: {edad}, Especialidad Médica: {especialidad}")
 
+
 boton_agregar = tk.Button(ventana, text="Agregar Paciente", command=agregar_paciente)
 boton_agregar.pack(pady=20)
+
+
+#Abrir imagen cola
+def abrir_cola():
+    import os
+    os.startfile("Cola.png")
+    
+
+
+boton_imagen = tk.Button(ventana, text="Abrir Cola", command=abrir_cola)
+boton_imagen.pack(pady=20)
+
+# Label para mostrar los datos del paciente
+label_paciente = tk.Label(ventana, text="", font=("Arial", 12), justify="left")
+label_paciente.pack(pady=20)
+
+
+def mostrar_paciente():
+    nombre = "mario"
+    edad = "12"
+    especialidad = "Pediatria"
+    
+    # Aquí puedes calcular minutos de entrada y atendido, por ahora pongo valores de ejemplo
+    minuto_entrada = 1
+    minuto_atendido = 28
+    
+    texto = f"Nombre: {nombre}\nEdad: {edad}\nEspecialidad Medica: {especialidad}\nMinuto de entrada a Cola: {minuto_entrada}\nMinuto atendido: {minuto_atendido}"
+    label_paciente.config(text=texto)
+
+# Botón que ejecuta la función
+boton_mostrar = tk.Button(ventana, text="Mostrar Paciente", command=mostrar_paciente)
+boton_mostrar.pack(pady=10)
+
 
 
 ventana.mainloop()

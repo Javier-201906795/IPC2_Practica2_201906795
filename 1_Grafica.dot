@@ -11,5 +11,30 @@ Edad: 18
 Especialidad Medica: Medicina General
 Minuto entrada: 5
 Minuto atendido: None"];
+paciente3 [label="Nombre: Juan Perez
+Edad: 30
+Especialidad Medica: Pediatria
+Minuto entrada: 1
+Minuto atendido: None"];
+paciente4 [label="Nombre: Juan Perez
+Edad: 30
+Especialidad Medica: Pediatria
+Minuto entrada: 1
+Minuto atendido: None"];
+paciente5 [label="Nombre: Juan Perez
+Edad: 30
+Especialidad Medica: Pediatria
+Minuto entrada: 1
+Minuto atendido: None"];
+paciente6 [label="Nombre: Juan Perez
+Edad: 30
+Especialidad Medica: Pediatria
+Minuto entrada: 1
+Minuto atendido: None"];
+paciente7 [label="Nombre: Juan Perez
+Edad: 30
+Especialidad Medica: Pediatria
+Minuto entrada: 1
+Minuto atendido: None"];
 
-paciente1 -> paciente2;}
+paciente1 -> paciente2 -> paciente3 -> paciente4 -> paciente5 -> paciente6 -> paciente7;}
