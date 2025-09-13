@@ -1,0 +1,19 @@
+digraph ColaPacientes {
+graph [rankdir=LR];
+node [shape=box, style=filled, fillcolor=lightyellow, fontname="Helvetica"];
+
+paciente1 [label="Nombre: Maria Mendez
+Edad: 18
+Especialidad Medica: Medicina General
+Minuto de entrada a cola: 17"];
+paciente2 [label="Nombre: Juan Perez
+Edad: 25
+Especialidad Medica: Pediatría
+Minuto de entrada a cola: 20"];
+paciente3 [label="Nombre: Ana López
+Edad: 30
+Especialidad Medica: Cardiología
+Minuto de entrada a cola: 23"];
+
+paciente1 -> paciente2 -> paciente3;
+}
