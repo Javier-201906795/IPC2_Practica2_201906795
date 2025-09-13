@@ -1,4 +1,6 @@
 import tkinter as tk
+import os
+from tkinter import messagebox
 
 from funciones import *
 
@@ -116,9 +118,12 @@ boton_agregar.pack(pady=20)
 
 #Abrir imagen cola
 def abrir_cola():
-    import os
-    os.startfile("Cola.png")
-    
+    tamano = tamano_cola()
+    if tamano > 0:
+        os.startfile("Cola.png")
+    else:
+        print("Cola Vacia, no hay imagen que mostrar")
+        messagebox.showwarning("Advertencia", "Cola Vacia, no hay imagen que mostrar")
 
 
 boton_imagen = tk.Button(ventana, text="Abrir Cola", command=abrir_cola)

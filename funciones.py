@@ -52,6 +52,10 @@ def guardar_tiempo_atencion(minuto):
     temp = ColaPacientes.primero.info
     temp.asignarminutoentredaatendido(minuto)
 
+def tamano_cola():
+    global ColaPacientes
+    return ColaPacientes.tamano()
+
 
 # #paciente nuevo
 # crear_paciente("Juan Perez", 30, "Pediatria",1)
