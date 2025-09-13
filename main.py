@@ -28,7 +28,7 @@ def crear_paciente(nombre,edad, especialidad):
 
 def tiempo_faltante(paciente, minuto_actual):
     especialidad = paciente.especialidadmedica
-    tiempoentrada = paciente.minutoentredaacola
+    tiempoentrada = paciente.minutoentredaatendido
     tiempoestimado = 0
 
     if especialidad == "Medicina General":
@@ -106,7 +106,7 @@ for minuto in range(1,minutosmax):
         persona_atendiendo = ColaPacientes.Pop()
         if persona_atendiendo != None:
             print(">>> Nuevo paciente a atender:")
-            persona_atendiendo.asignarminutoentredaacola(minuto)
+            persona_atendiendo.asignarminutoentredaatendido(minuto)
             persona_atendiendo.desplegar()
         
     

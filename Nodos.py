@@ -85,15 +85,15 @@ class Paciente(InfoNodo):
         self.nombre = nombre
         self.edad = edad
         self.especialidadmedica = especialidadmedica
-        self.minutoentredaacola = None
+        self.minutoentredaatendido = None
     
-    def asignarminutoentredaacola(self, minuto):
-        self.minutoentredaacola = minuto
+    def asignarminutoentredaatendido(self, minuto):
+        self.minutoentredaatendido = minuto
 
     def desplegar(self):
         print("\n-------------------")
         print("Nombre: ", self.nombre)
         print("Edad: ", self.edad)
         print("Especialidad Medica: ", self.especialidadmedica)
-        print("Minuto de entrada a cola: ", self.minutoentredaacola)
+        print("Minuto de entrada a cola: ", self.minutoentredaatendido)
         print("-------------------\n")
