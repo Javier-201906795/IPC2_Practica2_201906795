@@ -3,6 +3,11 @@ import tkinter as tk
 from funciones import *
 
 
+
+#Variables
+contador_tiempo = 0
+
+
 ventana = tk.Tk()
 ventana.geometry("1000x650")
 ventana.title("Practica 2 - IPC2 ")
@@ -35,6 +40,12 @@ def agregar_paciente():
     edad = entrada_edad.get()
     especialidad = entrada_especialidad.get()
     print(f"Nombre: {nombre}, Edad: {edad}, Especialidad Médica: {especialidad}")
+    #Funciones
+    crear_paciente(nombre, edad, especialidad, contador_tiempo)
+    #Limpiar campos
+    entrada_nombre.delete(0, tk.END)
+    entrada_edad.delete(0, tk.END)
+    entrada_especialidad.delete(0, tk.END)
 
 
 boton_agregar = tk.Button(ventana, text="Agregar Paciente", command=agregar_paciente)
@@ -69,8 +80,7 @@ def mostrar_paciente():
 label_tiempo = tk.Label(ventana, text="Tiempo: 0", font=("Arial", 20, "bold"), fg="blue")
 label_tiempo.pack(pady=10)
 
-# Contador global
-contador_tiempo = 0
+
 
 # Función para incrementar el tiempo
 def incrementar_tiempo1():
