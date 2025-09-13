@@ -30,7 +30,7 @@ def crear_paciente(nombre,edad, especialidad, tiempoentrada):
 def tiempo_faltante(paciente, minuto_actual):
     especialidad = paciente.especialidadmedica
     tiempoentrada = paciente.minutoentredaatendido
-    tiempoestimado = 0
+    tiempoestimado = 1
 
     if especialidad == "Medicina General":
         tiempoestimado = 10

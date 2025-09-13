@@ -6,12 +6,14 @@ from funciones import *
 
 #Variables
 contador_tiempo = 0
+tiempofalante = 0
 
 persona_atendiendo = None
 
 
 def atender_paciente(minuto):
     global persona_atendiendo
+    global tiempofalante
     #Atender paciente
     if persona_atendiendo != None:
         print(">> Atendiendo a:")
