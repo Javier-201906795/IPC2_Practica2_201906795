@@ -32,16 +32,18 @@ def imagenCola(ColaPacientes):
     dot_text = """digraph ColaPacientes {
 graph [rankdir=LR];
 node [shape=box, style=filled, fillcolor=lightyellow, fontname="Helvetica"];
+"""
 
+    dot_text += """
 paciente1 [label="Nombre: Maria Mendez\nEdad: 18\nEspecialidad Medica: Medicina General\nMinuto de entrada a cola: 17"];
 paciente2 [label="Nombre: Juan Perez\nEdad: 25\nEspecialidad Medica: Pediatría\nMinuto de entrada a cola: 20"];
 paciente3 [label="Nombre: Ana López\nEdad: 30\nEspecialidad Medica: Cardiología\nMinuto de entrada a cola: 23"];
+"""
 
+    dot_text += """
 paciente1 -> paciente2 -> paciente3;
 }
 """
-
-    
 
     # Guardar el archivo .dot
     with open("1_Grafica.dot", "w", encoding="utf-8") as f:
