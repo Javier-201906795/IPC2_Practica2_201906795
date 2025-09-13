@@ -1,5 +1,7 @@
 import tkinter as tk
 
+from funciones import *
+
 
 ventana = tk.Tk()
 ventana.geometry("1000x600")
