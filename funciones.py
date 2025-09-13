@@ -46,28 +46,6 @@ def tiempo_faltante(paciente, minuto_actual):
 
 
 
-# def atender_paciente(minuto):
-#     #Atender paciente
-#     if persona_atendiendo != None:
-#         print(">> Atendiendo a:")
-        
-#         persona_atendiendo.desplegar()
-#         tiempofalante = tiempo_faltante(persona_atendiendo, minuto)
-#         print(f"------------------------------------> Tiempo faltante: {tiempofalante} minutos")
-
-#         if tiempofalante <= 0:
-#             print(">>> Paciente atendido")
-#             persona_atendiendo = None
-        
-#     else:
-#         #Agregar paciente a atender
-#         persona_atendiendo = ColaPacientes.Pop()
-#         if persona_atendiendo != None:
-#             print(">>> Nuevo paciente a atender:")
-#             persona_atendiendo.asignarminutoentredaatendido(minuto)
-#             persona_atendiendo.desplegar()
-
-
 
 
 # #paciente nuevo
