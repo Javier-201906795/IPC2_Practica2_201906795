@@ -1,10 +1,5 @@
 digraph ColaPacientes {
 graph [rankdir=LR];
 node [shape=box, style=filled, fillcolor=lightyellow, fontname="Helvetica"];
-paciente1 [label="Nombre: juan
-Edad: 12
-Especialidad Medica: Ginecologia
-Minuto entrada: 3
-Minuto atendido: None"];
 
-paciente1;}
+;}

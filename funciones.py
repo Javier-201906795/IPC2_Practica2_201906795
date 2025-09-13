@@ -44,9 +44,13 @@ def tiempo_faltante(paciente, minuto_actual):
     return tiempoestimado - (minuto_actual - tiempoentrada)
 
 def graficar_cola():
+    global ColaPacientes
     imagenCola(ColaPacientes)
 
-
+def guardar_tiempo_atencion(minuto):
+    #Guardar tiempo paciente atendido
+    temp = ColaPacientes.primero.info
+    temp.asignarminutoentredaatendido(minuto)
 
 
 # #paciente nuevo

@@ -44,6 +44,8 @@ def atender_paciente(minuto):
             persona_atendiendo = None
         
     else:
+        #Guardar tiempo paciente atendido
+        guardar_tiempo_atencion(minuto)
         #Agregar paciente a atender
         persona_atendiendo = ColaPacientes.Pop()
         if persona_atendiendo != None:
@@ -104,6 +106,8 @@ def agregar_paciente():
     entrada_nombre.delete(0, tk.END)
     entrada_edad.delete(0, tk.END)
     entrada_especialidad.delete(0, tk.END)
+    #Graficar cola
+    graficar_cola()
 
 
 boton_agregar = tk.Button(ventana, text="Agregar Paciente", command=agregar_paciente)

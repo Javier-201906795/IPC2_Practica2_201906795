@@ -62,7 +62,7 @@ node [shape=box, style=filled, fillcolor=lightyellow, fontname="Helvetica"];
         minutoentredaatendido = paciente.info.minutoentredaatendido 
         minutoentradaalacola = paciente.info.minutoentradaalacola
         print(f"Paciente: {nombre}, {edad}, {especialidadmedica}, {minutoentredaatendido}")
-        dot_text += f'paciente{i} [label="Nombre: {nombre}\nEdad: {edad}\nEspecialidad Medica: {especialidadmedica}\nMinuto entrada: {minutoentradaalacola}\nMinuto atendido: {minutoentredaatendido}"];\n'
+        dot_text += f'paciente{i} [label="Nombre: {nombre}\nEdad: {edad}\nEspecialidad Medica: {especialidadmedica}\nMinuto entrada: {minutoentradaalacola}"];\n'
 
     print("\n" + "/"*10 + "Fin Recorrer Cola" + "/"*10)
 
