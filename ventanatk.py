@@ -4,7 +4,7 @@ from funciones import *
 
 
 ventana = tk.Tk()
-ventana.geometry("1000x600")
+ventana.geometry("1000x650")
 ventana.title("Practica 2 - IPC2 ")
 
 etiqueta = tk.Label(ventana, text="FIFO - Cola de Pacientes", font=("Arial", 16))
@@ -88,15 +88,20 @@ def incrementar_tiempo10():
     contador_tiempo += 10
     label_tiempo.config(text=f"Tiempo: {contador_tiempo}")
 
-# Botón debajo del label para incrementar tiempo
-boton_tiempo = tk.Button(ventana, text="Incrementar Tiempo + 1", command=incrementar_tiempo1)
-boton_tiempo.pack(pady=10)
-# Botón debajo del label para incrementar tiempo
-boton_tiempo = tk.Button(ventana, text="Incrementar Tiempo + 5", command=incrementar_tiempo5)
-boton_tiempo.pack(pady=10)
-# Botón debajo del label para incrementar tiempo
-boton_tiempo = tk.Button(ventana, text="Incrementar Tiempo + 10", command=incrementar_tiempo10)
-boton_tiempo.pack(pady=10)
+# Frame para contener los botones de tiempo
+frame_botones_tiempo = tk.Frame(ventana)
+frame_botones_tiempo.pack(pady=10)
+
+# Botones Timpo
+boton_tiempo1 = tk.Button(frame_botones_tiempo, text="Incrementar Tiempo + 1", command=incrementar_tiempo1)
+boton_tiempo1.pack(side="left", padx=5)
+
+boton_tiempo5 = tk.Button(frame_botones_tiempo, text="Incrementar Tiempo + 5", command=incrementar_tiempo5)
+boton_tiempo5.pack(side="left", padx=5)
+
+boton_tiempo10 = tk.Button(frame_botones_tiempo, text="Incrementar Tiempo + 10", command=incrementar_tiempo10)
+boton_tiempo10.pack(side="left", padx=5)
+
 
 # Botón 
 boton_mostrar = tk.Button(ventana, text="Mostrar Paciente", command=mostrar_paciente)
