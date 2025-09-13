@@ -140,11 +140,13 @@ def incrementar_tiempo5():
     global contador_tiempo
     contador_tiempo += 5
     label_tiempo.config(text=f"Tiempo: {contador_tiempo}")
+    atender_paciente(contador_tiempo)
 
 def incrementar_tiempo10():
     global contador_tiempo
     contador_tiempo += 10
     label_tiempo.config(text=f"Tiempo: {contador_tiempo}")
+    atender_paciente(contador_tiempo)
 
 # Frame para contener los botones de tiempo
 frame_botones_tiempo = tk.Frame(ventana)
