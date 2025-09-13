@@ -83,7 +83,7 @@ class Cola:
 class Paciente(InfoNodo):
     def __init__(self, nombre, edad, especialidadmedica):
         self.nombre = nombre
-        self.edad = edad
+        self.edad = edad    
         self.especialidadmedica = especialidadmedica
         self.minutoentredaatendido = None
     

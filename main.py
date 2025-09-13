@@ -3,6 +3,7 @@
 
 import os
 from Nodos import *
+from graficagraphviz import imagenCola, cola
 
 
 
@@ -43,35 +44,6 @@ def tiempo_faltante(paciente, minuto_actual):
     return tiempoestimado - (minuto_actual - tiempoentrada)
 
 
-def imagenCola():
-        
-
-    dot_text = """digraph ColaPacientes {
-graph [rankdir=LR];
-node [shape=box, style=filled, fillcolor=lightyellow, fontname="Helvetica"];
-
-paciente1 [label="Nombre: Maria Mendez\nEdad: 18\nEspecialidad Medica: Medicina General\nMinuto de entrada a cola: 17"];
-paciente2 [label="Nombre: Juan Perez\nEdad: 25\nEspecialidad Medica: Pediatría\nMinuto de entrada a cola: 20"];
-paciente3 [label="Nombre: Ana López\nEdad: 30\nEspecialidad Medica: Cardiología\nMinuto de entrada a cola: 23"];
-
-paciente1 -> paciente2 -> paciente3;
-}
-"""
-
-    
-
-    # Guardar el archivo .dot
-    with open("1_Grafica.dot", "w", encoding="utf-8") as f:
-        f.write(dot_text)
-
-    print(">> Archivo 1_Grafica.dot generado")
-
-    #Crear Imagen
-    try:
-        os.system(f"dot -Tpng 1_Grafica.dot -o Cola.png")
-        print(f">>Imagen Cola.png generada")
-    except:
-        print("!! Error al crear imagen ¡¡¡")
 
 
 
@@ -82,6 +54,14 @@ paciente1 -> paciente2 -> paciente3;
 #paciente nuevo
 crear_paciente("Juan Perez", 30, "Pediatria")
 crear_paciente("Maria Mendez", 18, "Medicina General")
+
+
+#Crear imagen de la cola
+imagenCola(ColaPacientes)
+print("/"*10 + "Cola" + "/"*10)
+cola(ColaPacientes)
+
+
 
 #EMULACION ATENCION
 #Cada ciclo es un 1 minuto
@@ -110,5 +90,4 @@ for minuto in range(1,minutosmax):
             persona_atendiendo.desplegar()
         
     
-#Crear imagen de la cola
-imagenCola()
+
