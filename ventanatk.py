@@ -51,10 +51,6 @@ def abrir_cola():
 boton_imagen = tk.Button(ventana, text="Abrir Cola", command=abrir_cola)
 boton_imagen.pack(pady=20)
 
-# Label para mostrar los datos del paciente
-label_paciente = tk.Label(ventana, text="", font=("Arial", 12), justify="left")
-label_paciente.pack(pady=20)
-
 
 def mostrar_paciente():
     nombre = "mario"
@@ -68,9 +64,51 @@ def mostrar_paciente():
     texto = f"Nombre: {nombre}\nEdad: {edad}\nEspecialidad Medica: {especialidad}\nMinuto de entrada a Cola: {minuto_entrada}\nMinuto atendido: {minuto_atendido}"
     label_paciente.config(text=texto)
 
-# Botón que ejecuta la función
+
+# Label de tiempo
+label_tiempo = tk.Label(ventana, text="Tiempo: 0", font=("Arial", 20, "bold"), fg="blue")
+label_tiempo.pack(pady=10)
+
+# Contador global
+contador_tiempo = 0
+
+# Función para incrementar el tiempo
+def incrementar_tiempo1():
+    global contador_tiempo
+    contador_tiempo += 1
+    label_tiempo.config(text=f"Tiempo: {contador_tiempo}")
+
+def incrementar_tiempo5():
+    global contador_tiempo
+    contador_tiempo += 5
+    label_tiempo.config(text=f"Tiempo: {contador_tiempo}")
+
+def incrementar_tiempo10():
+    global contador_tiempo
+    contador_tiempo += 10
+    label_tiempo.config(text=f"Tiempo: {contador_tiempo}")
+
+# Botón debajo del label para incrementar tiempo
+boton_tiempo = tk.Button(ventana, text="Incrementar Tiempo + 1", command=incrementar_tiempo1)
+boton_tiempo.pack(pady=10)
+# Botón debajo del label para incrementar tiempo
+boton_tiempo = tk.Button(ventana, text="Incrementar Tiempo + 5", command=incrementar_tiempo5)
+boton_tiempo.pack(pady=10)
+# Botón debajo del label para incrementar tiempo
+boton_tiempo = tk.Button(ventana, text="Incrementar Tiempo + 10", command=incrementar_tiempo10)
+boton_tiempo.pack(pady=10)
+
+# Botón 
 boton_mostrar = tk.Button(ventana, text="Mostrar Paciente", command=mostrar_paciente)
 boton_mostrar.pack(pady=10)
+
+# Label para mostrar los datos del paciente
+label_paciente = tk.Label(ventana, text="", font=("Arial", 12), justify="left")
+label_paciente.pack(pady=20)
+
+
+
+
 
 
 
