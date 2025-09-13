@@ -11,6 +11,22 @@ tiempofalante = 0
 persona_atendiendo = None
 
 
+def mostrar_paciente():
+    if persona_atendiendo == None:
+        label_paciente.config(text="No hay paciente siendo atendido")
+    else:
+        nombre = persona_atendiendo.nombre
+        edad = persona_atendiendo.edad
+        especialidad = persona_atendiendo.especialidadmedica
+        
+        # Aquí puedes calcular minutos de entrada y atendido, por ahora pongo valores de ejemplo
+        minuto_entrada = persona_atendiendo.minutoentradaalacola
+        minuto_atendido = persona_atendiendo.minutoentredaatendido
+        
+        texto = f"Nombre: {nombre}\nEdad: {edad}\nEspecialidad Medica: {especialidad}\nMinuto de entrada a Cola: {minuto_entrada}\nMinuto atendido: {minuto_atendido}"
+        label_paciente.config(text=texto)
+
+
 def atender_paciente(minuto):
     global persona_atendiendo
     global tiempofalante
@@ -34,7 +50,8 @@ def atender_paciente(minuto):
             print(">>> Nuevo paciente a atender:")
             persona_atendiendo.asignarminutoentredaatendido(minuto)
             persona_atendiendo.desplegar()
-
+    #Muestra en un texto la informacion del paciente
+    mostrar_paciente()
 
 
 
@@ -103,20 +120,7 @@ boton_imagen = tk.Button(ventana, text="Abrir Cola", command=abrir_cola)
 boton_imagen.pack(pady=20)
 
 
-def mostrar_paciente():
-    if persona_atendiendo == None:
-        label_paciente.config(text="No hay paciente siendo atendido")
-    else:
-        nombre = persona_atendiendo.nombre
-        edad = persona_atendiendo.edad
-        especialidad = persona_atendiendo.especialidadmedica
-        
-        # Aquí puedes calcular minutos de entrada y atendido, por ahora pongo valores de ejemplo
-        minuto_entrada = persona_atendiendo.minutoentradaalacola
-        minuto_atendido = persona_atendiendo.minutoentredaatendido
-        
-        texto = f"Nombre: {nombre}\nEdad: {edad}\nEspecialidad Medica: {especialidad}\nMinuto de entrada a Cola: {minuto_entrada}\nMinuto atendido: {minuto_atendido}"
-        label_paciente.config(text=texto)
+
 
 
 # Label de tiempo
