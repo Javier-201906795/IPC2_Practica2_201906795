@@ -81,12 +81,16 @@ class Cola:
 
 
 class Paciente(InfoNodo):
-    def __init__(self, nombre, edad, especialidadmedica):
+    def __init__(self, nombre, edad, especialidadmedica, minutoentrada):
         self.nombre = nombre
         self.edad = edad    
         self.especialidadmedica = especialidadmedica
         self.minutoentredaatendido = None
+        self.minutoentradaalacola = minutoentrada
     
+    def obtenerminutoentradaalacola(self):
+        return self.minutoentradaalacola
+
     def asignarminutoentredaatendido(self, minuto):
         self.minutoentredaatendido = minuto
 
@@ -95,5 +99,6 @@ class Paciente(InfoNodo):
         print("Nombre: ", self.nombre)
         print("Edad: ", self.edad)
         print("Especialidad Medica: ", self.especialidadmedica)
-        print("Minuto de entrada a cola: ", self.minutoentredaatendido)
+        print("Minuto de entrada a Cola: ", self.minutoentradaalacola)
+        print("Minuto atendido: ", self.minutoentredaatendido)
         print("-------------------\n")

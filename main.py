@@ -14,10 +14,10 @@ persona_atendiendo = None
 
 
 
-def crear_paciente(nombre,edad, especialidad):
+def crear_paciente(nombre,edad, especialidad, tiempoentrada):
     print( "\n************* [ Nueovo Paciente ] ***********")
     #Crear un paciente
-    paciente = Paciente(nombre, edad, especialidad)
+    paciente = Paciente(nombre, edad, especialidad, tiempoentrada)
     paciente.desplegar()
     print("*********************************************")
     #Agregar a la cola
@@ -52,8 +52,8 @@ def tiempo_faltante(paciente, minuto_actual):
 
 
 #paciente nuevo
-crear_paciente("Juan Perez", 30, "Pediatria")
-crear_paciente("Maria Mendez", 18, "Medicina General")
+crear_paciente("Juan Perez", 30, "Pediatria",1)
+crear_paciente("Maria Mendez", 18, "Medicina General",5)
 
 
 #Crear imagen de la cola
