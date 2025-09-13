@@ -21,6 +21,7 @@ def atender_paciente(minuto):
         persona_atendiendo.desplegar()
         tiempofalante = tiempo_faltante(persona_atendiendo, minuto)
         print(f"------------------------------------> Tiempo faltante: {tiempofalante} minutos")
+        label_tiempofaltante.config(text=f"Tiempo Faltante: {tiempofalante}")
 
         if tiempofalante <= 0:
             print(">>> Paciente atendido")
@@ -158,11 +159,16 @@ boton_tiempo10.pack(side="left", padx=5)
 
 # Botón 
 boton_mostrar = tk.Button(ventana, text="Mostrar Paciente", command=mostrar_paciente)
-boton_mostrar.pack(pady=10)
+boton_mostrar.pack(pady=5)
+
+
+# Label de tiempo
+label_tiempofaltante = tk.Label(ventana, text="Tiempo Faltante: 0", font=("Arial", 20, "bold"), fg="blue")
+label_tiempofaltante.pack(pady=5)
 
 # Label para mostrar los datos del paciente
 label_paciente = tk.Label(ventana, text="", font=("Arial", 12), justify="left")
-label_paciente.pack(pady=20)
+label_paciente.pack(pady=10)
 
 
 
