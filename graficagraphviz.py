@@ -3,10 +3,15 @@ import os
 def cola(ColaPacientes):
     print("\n" + "/"*10 + "Recorrer Cola" + "/"*10)
     numeropacientes = ColaPacientes.tamano() + 1
+    paciente = None
     #Recorrer Cola
     for i in range(1,numeropacientes):
-        paciente = ColaPacientes.primero
+        if i <= 1:
+            paciente = ColaPacientes.primero
+        else:
+            paciente = paciente.siguiente
         paciente.info.desplegar()
+        #Datos
         nombre = paciente.info.nombre
         edad = paciente.info.edad   
         especialidadmedica = paciente.info.especialidadmedica
