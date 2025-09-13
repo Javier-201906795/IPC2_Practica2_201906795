@@ -51,48 +51,48 @@ def tiempo_faltante(paciente, minuto_actual):
 
 
 
-#paciente nuevo
-crear_paciente("Juan Perez", 30, "Pediatria",1)
-crear_paciente("Maria Mendez", 18, "Medicina General",5)
-crear_paciente("Juan Perez", 30, "Pediatria",1)
-crear_paciente("Juan Perez", 30, "Pediatria",1)
-crear_paciente("Juan Perez", 30, "Pediatria",1)
-crear_paciente("Juan Perez", 30, "Pediatria",1)
-crear_paciente("Juan Perez", 30, "Pediatria",1)
+# #paciente nuevo
+# crear_paciente("Juan Perez", 30, "Pediatria",1)
+# crear_paciente("Maria Mendez", 18, "Medicina General",5)
+# crear_paciente("Juan Perez", 30, "Pediatria",1)
+# crear_paciente("Juan Perez", 30, "Pediatria",1)
+# crear_paciente("Juan Perez", 30, "Pediatria",1)
+# crear_paciente("Juan Perez", 30, "Pediatria",1)
+# crear_paciente("Juan Perez", 30, "Pediatria",1)
 
 
-#Crear imagen de la cola
-imagenCola(ColaPacientes)
-print("/"*10 + "Cola" + "/"*10)
-cola(ColaPacientes)
+# #Crear imagen de la cola
+# imagenCola(ColaPacientes)
+# print("/"*10 + "Cola" + "/"*10)
+# cola(ColaPacientes)
 
 
 
-#EMULACION ATENCION
-#Cada ciclo es un 1 minuto
-minutosmax = 35
-for minuto in range(1,minutosmax):
-    print(f"\nMinuto {minuto}")
+# #EMULACION ATENCION
+# #Cada ciclo es un 1 minuto
+# minutosmax = 35
+# for minuto in range(1,minutosmax):
+#     print(f"\nMinuto {minuto}")
     
-    #Atender paciente
-    if persona_atendiendo != None:
-        print(">> Atendiendo a:")
+#     #Atender paciente
+#     if persona_atendiendo != None:
+#         print(">> Atendiendo a:")
         
-        persona_atendiendo.desplegar()
-        tiempofalante = tiempo_faltante(persona_atendiendo, minuto)
-        print(f"------------------------------------> Tiempo faltante: {tiempofalante} minutos")
+#         persona_atendiendo.desplegar()
+#         tiempofalante = tiempo_faltante(persona_atendiendo, minuto)
+#         print(f"------------------------------------> Tiempo faltante: {tiempofalante} minutos")
 
-        if tiempofalante <= 0:
-            print(">>> Paciente atendido")
-            persona_atendiendo = None
+#         if tiempofalante <= 0:
+#             print(">>> Paciente atendido")
+#             persona_atendiendo = None
         
-    else:
-        #Agregar paciente a atender
-        persona_atendiendo = ColaPacientes.Pop()
-        if persona_atendiendo != None:
-            print(">>> Nuevo paciente a atender:")
-            persona_atendiendo.asignarminutoentredaatendido(minuto)
-            persona_atendiendo.desplegar()
+#     else:
+#         #Agregar paciente a atender
+#         persona_atendiendo = ColaPacientes.Pop()
+#         if persona_atendiendo != None:
+#             print(">>> Nuevo paciente a atender:")
+#             persona_atendiendo.asignarminutoentredaatendido(minuto)
+#             persona_atendiendo.desplegar()
         
     
 
